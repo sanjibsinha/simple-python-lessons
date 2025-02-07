@@ -100,38 +100,35 @@ def multiply(x, y):
 
 def divide(x, y):
     if y == 0:
-        return "Cannot divide by zero."
+        return "Cannot divide by zero"
     return x / y
 
-def calculator():
+def calcuator():
+    operations = {
+        "+": add,
+        "-": subtract,
+        "*": multiply,
+        "/": divide
+    }
     while True:
+        operation = input("Enter an operation (+, -, *, / and q for quit): ")
+        if operation == "q":
+            break
         try:
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
-            operation = input("Enter the operation (+, -, *, /): ")
-
-            if operation == '+':
-                result = add(num1, num2)
-            elif operation == '-':
-                result = subtract(num1, num2)
-            elif operation == '*':
-                result = multiply(num1, num2)
-            elif operation == '/':
-                result = divide(num1, num2)
+            x = float(input("Enter a number: "))
+            y = float(input("Enter another number: "))
+            if operation in operations:
+                print(operations[operation](x, y))
             else:
-                print("Invalid operation.")
-                continue  # Go back to the beginning of the loop
-
-            print("Result:", result)
-
-            another_calculation = input("Do you want to perform another calculation? (yes/no): ")
-            if another_calculation.lower() != 'yes':
-                break  # Exit the loop if the user doesn't want to continue
-
+                print("Invalid operation")
         except ValueError:
-            print("Invalid input. Please enter numbers only.")
+            print("Invalid input")
+        except ZeroDivisionError:
+            print("Cannot divide by zero")
+        
 
-calculator()
+if __name__ == "__main__":
+    calcuator()
 
 ```
 
