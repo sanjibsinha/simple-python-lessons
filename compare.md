@@ -1,3 +1,5 @@
+# It was my prompt
+
 Act as a senior Python developer and compare three code snippets that check whether the number is prime or not and it also checks the execution time.
 Please tell me among the three snippets, which one is more efficient and optimised.
 
@@ -139,8 +141,9 @@ print(f"Execution time: {execution_time:.6f} seconds")
 After checking each code snippet, please tell me which one is better and more optimised. 
 At the same time if you are asked to rewrite the above code snippets individually, how will you make it optimised? Please give us an example and explanations.
 
+## Prompt ends here
 
-========ChatGPT=================
+### ======== ChatGPT Responses =================
 
 ### Overview of Code Snippets
 
@@ -252,7 +255,7 @@ The second and third snippets are the most efficient and optimized as they reduc
 
 ==================
 
-======Gemini============
+### ====== Gemini Response ============
 
 
 Let's analyze the three Python snippets for prime number checking and determine the most efficient one.
